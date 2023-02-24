@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'features/auth/user_auth.dart';
-import 'features/home/home_page.dart';
 
 class FlutterBasicApp extends StatefulWidget {
   @override
@@ -11,6 +10,6 @@ class FlutterBasicApp extends StatefulWidget {
 class _FlutterBasicAppState extends State<FlutterBasicApp> {
   @override
   Widget build(BuildContext context) {
-    return const HomePage();
+    return const UserAuthentication();
   }
 }

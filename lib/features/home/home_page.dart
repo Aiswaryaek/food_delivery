@@ -63,6 +63,40 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          drawer: Drawer(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 188,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(50),
+                    ),color: grayColor
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(radius:50,
+                        backgroundImage: AssetImage('assets/images/pic.jpg'),
+                      ),
+                      SizedBox(height: 15),
+                      Text('Butomy',style: categoryText,)
+                    ],
+                  )
+                ),
+                SizedBox(height: 20,),
+                Padding(padding: EdgeInsets.only(left: 25),child: Row(
+                  children: [
+                    Icon(Icons.logout,color:grayColor,size: 20,),
+                    SizedBox(width: 15,),
+                    Text('Logout',style: subHeadText,),
+                  ],
+                ),)
+              ],
+            )
+          ),
           appBar: arrowAppBar(controller),
           backgroundColor: backgroundColor,
           body: SingleChildScrollView(

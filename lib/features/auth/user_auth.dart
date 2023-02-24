@@ -1,3 +1,4 @@
+import 'package:delivery/features/home/home_page.dart';
 import 'package:delivery/styles/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _UserAuthenticationState extends State<UserAuthentication> {
                 'Google',
                 false,
                 'https://icons-for-free.com/download-icon-Google-1320568266385361674_512.png',
-                dispose,
+                onButtonClick,
                 blueButtonColor),
             SizedBox(height:8),
             customButton(
@@ -43,11 +44,18 @@ class _UserAuthenticationState extends State<UserAuthentication> {
                 'Phone',
                 true,
                 Icons.phone,
-                dispose,
+                onButtonClick,
                 greenButtonColor)
           ],
         ),
       ),
     ));
   }
+    onButtonClick(){
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const HomePage(),
+        ),);
+    }
+
 }
